@@ -1,0 +1,30 @@
+#include <iostream>;
+using namespace std;
+int main()
+{
+	cout << "请为这个电影打分" << endl;
+	int score = 0;
+	cin >> score;
+	cout << "你的打分是：" <<score<< endl;
+	switch (score)
+	{
+	case 10:
+		cout << "你认为这个电影是经典电影" << endl;
+		break;
+	case 9:
+		cout << "你认为这个电影是经典电影" << endl;
+		break;
+	case 8:
+		cout << "你认为这个电影是经典电影" << endl;
+		break;
+	case 7:
+		cout << "你认为这个电影一般" << endl;
+		break;
+	case 6:
+		cout << "你认为这个电影一般" << endl;
+		break;
+	default:
+		cout << "烂片" << endl;
+	}
+	return 0;
+}
