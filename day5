@@ -1,0 +1,30 @@
+#include <iostream>;
+#include <ctime>;
+using namespace std;
+int main()
+{
+  //猜数字小游戏
+	srand((unsigned int)time(NULL));
+	int num = rand() % 100 + 1;
+	int val = 0;
+	cout << "请输入你要猜的数字" << endl;
+	while (1)
+	{
+		cin >> val;
+		if (val > num)
+		{
+			cout << "你猜测过大" << endl;
+		}
+		else if (val < num)
+		{
+			cout << "你猜测过小" << endl;
+		}
+		else
+		{
+			cout << "恭喜你猜对了" << endl;
+			break;
+		}
+	}
+
+	return 0;
+}
