@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    // 排序（确保 a ≤ b ≤ c，方便后续判断）
+    int temp;
+    if (a > b) { temp = a; a = b; b = temp; }
+    if (b > c) { temp = b; b = c; c = temp; }
+    if (a > b) { temp = a; a = b; b = temp; }
+
+    if (a + b > c) // 能组成三角形
+    {
+        // 先判断锐角/直角/钝角
+        if (a*a + b*b == c*c) // 修正：== 比较
+        {
+            cout << "Right triangle" << endl;
+        }
+        else if (a*a + b*b > c*c)
+        {
+            cout << "Acute triangle" << endl;
+        }
+        else // a*a + b*b < c*c
+        {
+            cout << "Obtuse triangle" << endl;
+        }
+
+        // 再单独判断等腰/等边（不受前面的分支影响）
+        if (a == b || a == c || b == c) // 修正：b == c
+        {
+            cout << "Isosceles triangle" << endl;
+        }
+        if (a == b && b == c) // 修正：== 比较，且用 && 连接
+        {
+            cout << "Equilateral triangle" << endl;
+        }
+    }
+    else // 不能组成三角形
+    {
+        cout << "Not triangle" << endl;
+    }
+
+    return 0;
+}
