@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+//封装一个圆的函数
+const double PI = 3.14;
+//圆的周长=2*pi*半径
+
+class yuan
+{
+	//访问权限
+	//公共权限
+public:
+
+	//半径
+	int m_r;
+
+	//行为
+
+	double zhouchang()
+	{
+		//圆周长的公式=2*pi*m_r
+
+		return 2 * PI * m_r;
+	}
+
+
+};
+
+
+int main()
+{
+
+	//通过圆类 创建圆类对象
+	yuan c1;
+	c1.m_r = 6;
+
+	cout << "圆的周长= " << c1.zhouchang() << endl;
+
+
+
+	system("pause");
+	return 0;
+
+}
