@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+//封装学生信息函数
+
+class student
+{
+public://公共权限
+
+
+
+	//姓名
+	string name;
+	//年龄
+	int age;
+
+	void studentxinxi()
+	{
+		cout << "学生姓名" << name <<"  "<<"年龄" << age << endl;
+	}
+
+};
+
+int main()
+{
+	student s1;
+	s1.name = "鲨鱼";
+	s1.age = 18;
+
+	s1.studentxinxi();
+
+	
+
+	system("pause");
+	return 0;
+
+}
+
+
+
